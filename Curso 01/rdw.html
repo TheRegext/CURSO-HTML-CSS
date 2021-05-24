@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+        }
+        body h1{
+            font-size: 18px;
+        }
+        body>div{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+        }
+        /* CELULAR */
+        body>div>p {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #000;
+            background-color: rgba(0, 0, 0, .1);
+            text-align: center;
+        }
+        
+        /*
+        480 - Celular
+        720 - Tablet
+        1024 - PC 
+        */
+
+
+
+        /* Tablet */
+        @media only screen and (min-width: 600px){
+        
+            body>div{
+                flex-direction: row;
+            }
+            /* PC */
+            body>div>p {
+                margin: 0;
+                display: inline-block;
+                box-sizing: border-box;
+            }
+                
+            body h1{
+                text-align: center;
+                font-size: 32px;
+            }
+        }
+        /* PC */
+        @media only screen and (min-width: 1024px){
+            body>div>p {
+                width: 15%;
+            }
+        }
+
+
+
+
+        @media only print{
+            body>div>p{
+                background-color: transparent;
+            }
+        }
+
+        .segundo{
+            background-color: tomato;
+            display: none;
+        }
+        .segundo+p{
+            visibility: hidden;
+            background-color: teal;
+        }
+
+        @media only screen and (min-width: 600px){
+            .segundo+p{
+                visibility: visible;
+            }
+
+            .segundo{
+                display: initial;
+                
+                z-index: 1;
+                transition: .3s;
+                
+            }
+
+            .segundo:hover{
+                position: relative;
+                outline: 1px solid rgba(0,0,0,.2);
+                box-shadow: 0 0 9px 0px #000;
+                transform: scale(1.03);
+                cursor: progress;
+                user-select: none;
+            }
+        }
+
+
+
+        
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mi Pagina Responsiva</h1>
+    </header>
+    <div>
+        <p>Hola #1</p><p class="segundo">Hola #2</p><p>Hola #3</p><p>Hola #4</p><p>Hola</p><p>Hola</p>
+    </div>
+</body>
+
+</html>

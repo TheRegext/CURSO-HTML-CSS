@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body>div>div {
+            background-color: chocolate;
+        }
+        
+        div.container-grid {
+            padding: 10px;
+            display: grid;
+            /*
+            grid-template-columns: 100px 100px 100px;
+            */
+            grid-template-areas: 'header header header' '. . .' 'menu content content ' 'banner banner banner' 'footer footer footer';
+            column-gap: 10px;
+            row-gap: 10px;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(103deg, rgba(2, 0, 36, 1) 0%, rgb(0, 0, 95) 100%);
+            /* Columnas */
+            /*justify-content: space-between;*/
+            /* Filas */
+            align-content: start;
+        }
+
+
+        @media not screen and (min-width: 600px){
+            div.container-grid {
+                grid-template-areas: 'header header header' 'menu menu menu' 'content content content ' 'banner banner banner' 'footer footer footer';
+            }
+        }
+
+        
+        .header {
+            grid-area: header;
+            display: flex;
+            justify-content: stretch;
+            align-items: center;
+        }
+        
+        .header>* {
+            flex-grow: 1;
+            text-align: center;
+        }
+        
+        .menu {
+            grid-area: menu;
+        }
+        
+        .content {
+            grid-area: content;
+        }
+        
+        .banner {
+            grid-area: banner;
+            height: 50px;
+            background-color: crimson;
+        }
+        
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-grid">
+        <div class="header">
+            <div>
+                OTRO DIV
+            </div>
+            <p>
+                OTRO DIV
+            </p>
+            <div>
+                OTRO DIV
+            </div>
+        </div>
+        <div class="menu">MENU</div>
+        <div class="content">CONTENIDO</div>
+        <div class="footer">FOOTER</div>
+        <div class="banner"></div>
+
+    </div>
+    Texto<br> texto 2
+</body>
+
+</html>

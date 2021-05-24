@@ -1,0 +1,61 @@
+$colore_primario: rgb(158, 5, 25);
+$colore_secundario: rgb(5, 158, 56);
+$font_header: 'Roboto', "Arial";
+
+@mixin border ($tam: 5px, $color: #000) {
+    border-radius: 20px;
+    border: $tam dashed $color;
+    outline: 1px solid #0F0;
+}
+
+.pepe{
+    background-color: #0F0;
+}
+
+%border-dashed{
+    border-radius: 20px;
+    border: 10px dashed rgb(45, 51, 136);
+    outline: 1px solid #0F0;
+}
+
+div {
+    >p{
+        @extend %border-dashed; // Herencia
+        background-color: $colore_primario;
+    }
+
+    div{
+        $colore_primario: rgba(0, 0, 0, 0.116) !global;
+        @extend %border-dashed; // Herencia
+        font: {
+            family: $font_header;
+        }
+
+        p{
+            @extend %border-dashed; // Herencia
+            font-family: $font_header;
+
+        }
+    }
+
+    &.principal{
+        background-color: chocolate;
+        
+        .button{
+            @extend %border-dashed;
+            &_text{
+                color: pink;
+            }
+        }
+
+        &--red{
+            background-color: red;
+        }
+
+        &.dark{
+            
+            background-color: rebeccapurple;;
+        }
+    }
+    
+}

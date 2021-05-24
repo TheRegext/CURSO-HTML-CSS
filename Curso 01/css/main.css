@@ -1,0 +1,336 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    /*color: rgb(0,0,0);*/
+    /*color: rgba(0,0,0,1);*/
+    font-size: 52px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.borde {
+    border: 4px solid #2f40a0;
+    margin-left: 10px;
+    font-style: italic;
+    padding: 2PX;
+}
+
+/*
+etiqueta
+.class
+#id
+
+etiqueta.class
+.class.class
+#id.class
+
+etiqueta hijo
+.class hijo
+#id hijo
+
+
+*/
+
+nav {
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    background-color: #111;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: .5s transform;
+}
+
+nav ul li a:hover {
+    background-color: #2f40a0;
+    /*font-size: 24px;*/
+    transform: scale(1.2);
+}
+
+nav ul li a:active {
+    /*font-size: 24px;*/
+    transform: scale(.8);
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: #111;
+}
+
+p.descripcion span {}
+
+.articulo.descripcion p {
+    height: 10px;
+    background-color: blue;
+}
+
+main>p>span {
+    background-color: rgba(1, 1, 1, .5);
+}
+
+.brian_lara.oscuro .pie-imagen strong {
+    color: #BF58CF;
+}
+
+.brian_lara img~p~p {
+    background-color: rgba(1, 1, 255, .5);
+    padding-left: 100px;
+}
+
+.brian_lara img+p+p+p {
+    background-color: rgba(1, 255, 255, .5);
+}
+
+section.brian_lara.oscuro h3 {
+    color: darkred;
+}
+
+.brian_lara img+p.caption, .brian_lara video+p.caption {
+    color: chartreuse;
+}
+
+nav {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* linea */
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+nav>ul {
+    flex-grow: 1;
+    background-color: #BF58CF;
+    /*align-self: flex-end;*/
+}
+
+nav>img {
+    width: 100px;
+    height: 100px;
+}
+
+footer>div+div {}
+
+footer>div.ter {}
+
+.tury_coco {
+    display: flex;
+    border: solid black 10px;
+    background-color: black;
+    width: 400px;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.tury_coco {
+    width: 100%;
+}
+
+.tury_coco .imagen img {
+    height: 450px;
+    border: solid black 10px;
+    margin: 0px;
+}
+
+.tury_coco h3 {
+    background-color: rgb(255, 235, 56);
+    border: black;
+    height: 60px;
+    border: solid black 10px;
+    margin: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tury_coco p {
+    background-color: rgb(56, 56, 255);
+    height: 300px;
+    width: 300px;
+    color: white;
+    border: solid black 10px;
+    margin: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tury_coco .imagen p {
+    background-color: brown;
+    height: 200px;
+    border: solid black 10px;
+    margin: 0px;
+    align-self: end;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav-alejo {
+    padding: 10px;
+    display: flex;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+.nav-alejo>img {
+    height: 100px;
+    width: 100px;
+}
+
+.nav-alejo>ul {
+    display: flex;
+    flex-grow: 1;
+    align-self: center;
+    list-style: none;
+    margin: 10px;
+    padding: 20px;
+    justify-content: space-around;
+    background-color: #FF9500;
+}
+
+.header-alejo>h1 {
+    text-align: center;
+    font-size: 5em;
+    font-family: sans-serif;
+}
+
+.main-alejo>h2 {
+    text-align: center;
+    font-size: 3em;
+    font-family: sans-serif;
+}
+
+.main-alejo>p {
+    font-family: sans-serif;
+}
+
+.alejo-seccion {
+    background-color: gray;
+    border: 3px white solid;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.alejo-puntillismo>h3 {
+    color: red;
+    text-align: center;
+    font-size: 40px;
+}
+
+.alejo-puntillismo2>h3 {
+    color: red;
+    width: 33%px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.alejo-futurismo>h3 {
+    color: red;
+    width: 33%px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.alejo-seccion>.alejo-puntillismo {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    width: 30%;
+    min-width: 400px;
+}
+
+.alejo-seccion>.alejo-puntillismo>p {
+    color: blue;
+}
+
+.alejo-seccion>.alejo-futurismo {
+    padding: 20px;
+    width: 30%;
+    min-width: 400px;
+}
+
+.alejo-seccion>.alejo-puntillismo2 {
+    padding: 20px;
+    width: 30%;
+    min-width: 400px;
+}
+
+.alejo-puntillismo>.imagen>.pie-imagen {
+    font-size: 13px;
+}
+
+.caption {
+    font-size: 13px;
+}
+
+table.mitabla {
+    width: 100%;
+    margin: 20px 0;
+}
+
+table.mitabla thead, table.mitabla tfoot {
+    background-color: #111;
+    color: #FFF;
+}
+
+table.mitabla tbody tr:nth-child(even) {
+    background-color: rgba(56, 56, 255, .2);
+}
+
+table.mitabla tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+table.mitabla td {
+    text-align: center;
+}
+
+.columna2 {
+    font-size: 20px;
+}
+
+h1 {
+    font-family: 'Open Sans Condensed', cursive;
+}
+
+h1 i {
+    font-size: 90px;
+    color: #BF58CF;
+    transition: .5s;
+}
+
+h1 i:hover {
+    color: #FF9500;
+    text-shadow: 0px 0px 10px #000;
+    box-shadow: 0 0 10 #000;
+}

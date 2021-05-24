@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <style>
+        form {
+            border: 2px dashed #000;
+            padding: 20px;
+        }
+        
+        #txtNombre::placeholder {
+            color: blue;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+
+        <label for="txtNombre">Nombre:</label> <input id="txtNombre" type="text" value="Pedro" name="txtNombre" placeholder="Ingrese su nombre." /> <br>
+        <label> Apellido:</label> <input type="text" value="Herrera" name="txtApellido" /><br>
+        <input type="checkbox" value="C++" name="cbPrograma" id="cbCpp" /> <label for="cbCpp">C++</label> <br>
+        <input type="checkbox" value="JAVA" name="cbPrograma" />Java <br>
+        <input type="checkbox" value="C#" name="cbPrograma" />C# <br> Clave: <input type="password" value="1234" name="txtClave" /><br>
+
+        <br>
+        <fieldset style="border: dashed rgb(33, 12, 63); ">
+            <legend>Cursos</legend>
+            <label><input type="radio" value="Desarrollo Web" name="rbCurso" /> Desarrollo Web</label><br>
+            <label><input type="radio" value="Javascript" name="rbCurso" /> Javascript</label><br>
+            <label><input type="radio" value="Node JS" name="rbCurso" /> Node JS</label><br>
+        </fieldset>
+        <input type="button" value="Enviar Cosillas" /><br>
+        <input type="submit" value="Evniar Formulario" />
+        <input type="reset" value="Texto" />
+        <!-- Input hacker -->
+        <input type="hidden" value="CLAVE SECRETA" name="hdSecreta" />
+        <br>
+        <label>
+            Seleccione una marca
+        <select name="id_marca" >
+            <optgroup label="Gaseosas">
+                <option value="2">Manaos</option>
+                <option value="3">Pepsi</option>
+                <option value="1">Coca Cola</option>
+            </optgroup>
+            <optgroup label="Aguas">
+                <option value="5">VillaManaos</option>
+                <option value="5">Villa del Sur</option>
+                <option value="5">Glaciar</option>
+            </optgroup>
+        </select>
+    </label>
+
+        <textarea name="descripcion">Hola que hace</textarea>
+
+        <button type="submit"><img src="./img/bonito.jpg" style="height: 50px; width: 50px;" /> Imagen linda <img src="./img/bonito.jpg" style="height: 50px; width: 50px;" /></button>
+    </form>
+</body>
+
+</html>
